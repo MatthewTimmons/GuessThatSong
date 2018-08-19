@@ -43,5 +43,27 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        mediumButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToLevelSelectIntent.putExtra("difficulty", "Medium");
+                SettingsManager.setShowBandTextView(true);
+                SettingsManager.setShowSongTextView(true);
+                SettingsManager.setSongDurationDifficulty(1);
+                startActivity(goToLevelSelectIntent);
+            }
+        });
+
+        hardButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToLevelSelectIntent.putExtra("difficulty", "Hard");
+                SettingsManager.setShowBandTextView(true);
+                SettingsManager.setShowSongTextView(true);
+                SettingsManager.setSongDurationDifficulty(2);
+                startActivity(goToLevelSelectIntent);
+            }
+        });
+
     }
 }

@@ -25,12 +25,6 @@ public class LevelSaveDataManager {
         allLevels.add(new Level("helena", "Helena", "My Chemical Romance", R.raw.helena_5, R.raw.helena_3, R.raw.helena_1, (Boolean) val.get("4")));
         allLevels.add(new Level("ino", "I'm Not Okay", "My Chemical Romance", R.raw.im_not_okay_5, R.raw.im_not_okay_3, R.raw.im_not_okay_1, (Boolean) val.get("5")));
 
-        if (val != null) {
-            Toast.makeText(context, val.toString(), Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(context, "val was empty", Toast.LENGTH_SHORT).show();
-        }
-
         allLevelsData = allLevels;
     }
 }

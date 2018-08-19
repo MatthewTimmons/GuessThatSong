@@ -27,7 +27,6 @@ public class LevelSelectActivity extends AppCompatActivity {
         levelsGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(LevelSelectActivity.this, "Clicked on level " + i, Toast.LENGTH_SHORT).show();
                 Intent goToGameIntent = new Intent(LevelSelectActivity.this, GameActivity.class);
                 goToGameIntent.putExtra("levelIndex", (i + 1));
                 startActivity(goToGameIntent);
